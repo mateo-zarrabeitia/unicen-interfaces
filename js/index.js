@@ -8,6 +8,7 @@ $(document).ready(function() {
         "method" : "GET",
         "data-type" : "HTML",
         success: function(textoCargado, status){
+          $(".noticias").hide();
           $(".contenido").html(textoCargado);
         }
       });
