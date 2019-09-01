@@ -71,6 +71,7 @@ $(document).ready(function() {
     function fileOnload(e) {
         let result=e.target.result;
         image.src = result;
+        $('.filtro').prop('checked', false);
     }
     
     $('.imgcharge').click(function(){
