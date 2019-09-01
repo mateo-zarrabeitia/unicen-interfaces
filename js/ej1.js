@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 let MAXCOL = 100;
 let MAXFIL = 100;
 let MAX = 500;
@@ -68,3 +68,5 @@ function calcularProm(){
     returnMaxFil();
     console.log("Inciso c:");
     calcularProm();
+
+});
