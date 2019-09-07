@@ -105,17 +105,15 @@ canvas.addEventListener("dblclick", function(event) {
     for (let index = 0; index < figuras.length; index++) {
         const element = figuras[index];
         
-        if(element.getPoligonoClose()){;
-            if(element.clickVertice(m.x, m.y) && !entro){
-                entro = true;
-                clear();
-                element.borrarVertice(element.clickVertice(m.x, m.y));                        
-            }
-            if(element.getCantVertices() == 1 ){
-                figuras.pop();
-            }
-            
+        if(element.clickVertice(m.x, m.y) && !entro){
+            entro = true;
+            clear();
+            element.borrarVertice(element.clickVertice(m.x, m.y));                        
         }
+        if(element.getCantVertices() == 1 ){
+            figuras.pop();
+        }
+        
     }
     figuras.forEach(element => {
         element.drawFigura();

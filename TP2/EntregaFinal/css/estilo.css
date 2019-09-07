@@ -1,0 +1,19 @@
+.breadcrumb {
+    background-color: #f8f9fa;
+}
+
+.breadcrumb-item a {
+    color: #6c757d
+}
+
+canvas {
+    margin: 2% auto;
+    display: block; 
+    max-width: 100%;
+    height: auto;
+}
+
+.noticias {
+	margin-top: 2%;
+	margin-inline: auto;
+}
