@@ -7,13 +7,13 @@
 }
 
 canvas {
-    margin: 2% auto;
+    margin: 1% auto;
     display: block; 
     max-width: 100%;
     height: auto;
 }
 
 .noticias {
-	margin-top: 2%;
-	margin-inline: auto;
+	margin-top: 1%;
+	
 }
