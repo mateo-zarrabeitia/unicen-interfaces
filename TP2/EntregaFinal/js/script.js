@@ -139,7 +139,7 @@ window.addEventListener("keyup", function (event) {
 canvas.addEventListener("mousewheel",function(event) {
     if (teclapulsada){
         figuras.forEach(element => {
-            element.cambiarColor(event.deltaY)   
+            element.cambiarColor(event.deltaY/10)   
         });
         figuras.forEach(element => {
             element.drawFigura(); 
@@ -148,6 +148,7 @@ canvas.addEventListener("mousewheel",function(event) {
 },
 false
 );
+
 
 
 

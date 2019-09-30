@@ -1,0 +1,14 @@
+.personaje {
+  position: relative;
+  top: 240px;
+  width: 291px;
+  height: 544px;
+  background: url('terrorista.png');
+  background-size: cover;
+  animation: walk .6s steps(8) infinite;
+  z-index: 1000;
+}
+
+@keyframes walk {
+  100% { background-position: -2328px}
+}

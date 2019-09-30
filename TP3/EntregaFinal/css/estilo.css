@@ -1,0 +1,263 @@
+body {
+  
+  margin-top: 10%;
+  background: #24aecd;
+}
+
+
+.puntaje{
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+}
+
+#imgover{
+  position: absolute;
+  width: 240px;
+  height: 150px;
+  z-index: 1000;
+  margin-top: 30px;
+  margin-left: auto;
+  visibility: hidden;
+}
+
+#gameOver{
+  position: absolute;
+  visibility: hidden;
+  margin-top: 200px; 
+  font-size: 30px;
+  margin-left: auto;
+  /* background: #acbcc065; */
+  font-family: 'Bangers', cursive;
+  color: #bea514
+}
+
+
+
+#game{
+  position: relative;
+}
+
+#game div{
+  position:absolute;
+}
+
+.life{
+  width: 30px;
+  height: 30px;
+}
+
+.key{
+  height: 45px;
+  width: 45px;
+}
+
+#vidas,#puntaje,#instrucciones{
+  margin-top: 1%;
+  position: relative;
+  z-index: 1000;
+  transform: translate(0,5px);
+  color: #bea514
+}
+
+#vidas{ 
+  transform: translate(-300px,10px);
+}
+
+#instrucciones{
+  transform: translate(250px,5px);
+  font-family: 'Bangers', cursive;
+}
+
+.btnReiniciar{
+  font-size: 20px;
+  transform: translate(80px,0);
+  background-color: rgb(178, 178, 178);
+}
+
+
+/* ANIMACION ENEMIGO */
+
+.enemy {
+  top:375px;
+  width: 100px;
+  height: 50px;
+  left: 1000px;
+  background-image: url('../images/spikes.png');
+  background-size: cover;
+  /* background-position: 0 0;/ */
+  transform: translate(-200px,0);
+  z-index: 1000;
+}
+
+.live {
+  top:320px;
+  width: 64px;
+  height: 64px;
+  left: 1200px;
+  background-image: url('../images/live.png');
+  background-size: cover;
+  transform: translate(-200px,0);
+  animation: live .6s steps(3) infinite;
+  z-index: 1000;
+}
+
+@keyframes live {
+  100% { background-position: -192px}
+ 100%{transform: translate(-220px,-0); }
+}
+
+
+/* ANIMACION PERSONAJE */
+
+.zombie-run {
+  position: relative;
+  top: 240px;
+  width: 167px;
+  height: 190px;
+  background: url('../images/zombie-run.png');
+  background-size: cover;
+  animation: run .6s steps(7) infinite;
+  transform: translate(-200px,0);
+  z-index: 1000;
+}
+
+@keyframes run {
+  100% { background-position: -1169px}
+}
+
+.zombie-jump {
+  position: absolute;
+  top: 135px;
+  width: 100px;
+  height: 220px;
+  background: url('../images/zombie-jump.png') left center;
+  background-size: cover;
+  animation: jump .9s steps(7) infinite;
+  transform: translate(-200px,0);
+  z-index: 1000;
+}
+
+@keyframes jump {
+  100% { background-position: -749px}
+  0%{transform: translate(-200px,-0px); }
+
+  25%{transform: translate(-200px,-10px); }
+
+  50%{transform: translate(-200px,-100px); }
+
+  75%{transform: translate(-200px,-50px); }
+
+  100%{transform: translate(-200px,-0px);
+  }
+}
+
+.zombie-hurt {
+  position: absolute;
+  top: 240px;
+  width: 144px;
+  height: 190px;
+  background: url('../images/zombie-hurt.png') left center;
+  background-size: cover;
+  animation: hurt .7s steps(5) infinite;
+  transform: translate(-200px,0);
+  z-index: 1000;
+}
+
+@keyframes hurt {
+  100% { background-position: -720px}
+  
+}
+.zombie-dead2 {
+  position: absolute;
+  top: 240px;
+  width: 225px;
+  height: 182px;
+  background: url('../images/zombie-dead.png') right center;
+  background-size: cover;
+  animation: dead .8s steps(8);
+  transform: translate(-200px,+100px);
+  z-index: 1000;
+}
+
+.zombie-dead {
+  position: absolute;
+  top: 240px;
+  width: 225px;
+  height: 182px;
+  background: url('../images/zombie-dead.png');
+  background-size: cover;
+  animation: dead .8s steps(7);
+  transform: translate(-200px,0);
+  z-index: 1000;
+}
+
+@keyframes dead {
+  100% { background-position: -1575px}
+  100%{transform: translate(-200px,+100px);}
+}
+
+
+/* ANIMACION DEL FONDO */
+
+.backs{
+  position: absolute;
+  width: 800px;
+  height: 450px;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+#back-1{
+  background-image: url('../images/fondos/9.png');
+  animation: fondo 2s infinite linear;
+  overflow: hidden;
+  z-index: 900;
+}
+
+#back-2{
+  background-image: url('../images/fondos/8.png');
+  animation: fondo 5s infinite linear;
+  z-index: 800;
+}
+
+#back-3{
+  background-image: url('../images/fondos/7.png');
+  animation: fondo 15s infinite linear;
+  z-index: 700;
+}
+
+#back-4{
+  background-image: url('../images/fondos/6.png');
+  animation: fondo 15s infinite linear;
+  z-index: 600;
+}
+
+#back-5{
+  background-image: url('../images/fondos/5.png');
+  animation: fondo 30s infinite linear;
+  z-index: 500;
+}
+#back-6{
+  background-image: url('../images/fondos/4.png');
+  animation: fondo 35s infinite linear;
+  z-index: 400;
+}
+#back-7{
+  background-image: url('../images/fondos/3.png');
+  animation: fondo 40s infinite linear;
+  z-index: 300;
+}
+#back-8{
+  background-image: url('../images/fondos/2.png');
+  animation: fondo 45s infinite linear;
+  z-index: 200;
+}
+#back-9{
+  background-image: url('../images/fondos/1.png');
+  animation: fondo 50s infinite linear;
+  z-index: 100;
+}
+
+@keyframes fondo {
+  100% {background-position: -800px; }
+}

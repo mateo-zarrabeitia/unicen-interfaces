@@ -1,0 +1,40 @@
+div
+{
+  margin-top: 50px; 
+  display:inline-block;
+  box-sizing:border-box;
+  border:5px solid #750303;
+  padding:35px;
+  width:160px;
+  height:90px;
+  background:#c53f0a;
+  text-align:center;
+  transition:all 0.3s ease;
+}
+
+
+.agrandar:hover
+{
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.achicar:hover
+{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.rotar:hover
+{
+  -webkit-transform:rotateZ(-30deg);
+  -ms-transform:rotateZ(-30deg);
+  transform:rotateZ(-30deg);
+}
+
+.redondear:hover
+{
+  border-radius : 50% ;
+}

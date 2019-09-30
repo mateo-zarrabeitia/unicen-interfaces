@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<div id="game" class="container-fluid row justify-content-md-center ">
+		<div id="vidas">
+			<img id="heart1" class="life" src="images/heart.png" alt="">
+			<img id="heart2" class="life" src="images/heart.png" alt="">
+			<img id="heart3" class="life" src="images/heart.png" alt="">
+		</div>
+		<div id="puntaje" class="puntaje">
+			<p>Puntaje: <span id="scoreIngame"></span></p>
+		</div>
+		<div id="instrucciones" class="puntaje">
+			Pulse <img class="key" src="images/space-bar.jpg" alt="UpArrowKey"> para saltar</p>
+		</div>
+		
+		<div id="zombie" class="zombie-run"></div>
+		<div id="back-1" class="backs">
+			<div id="enemy" class="enemy"></div>
+			<div id="live" class="live"></div>
+		</div>
+		<div id="back-2" class="backs"></div>
+		<div id="back-3" class="backs"></div>
+		<div id="back-4" class="backs"></div>
+		<div id="back-5" class="backs"></div>
+		<div id="back-6" class="backs"></div>
+		<div id="back-7" class="backs"></div>
+		<div id="back-8" class="backs"></div>
+		<div id="back-9" class="backs"></div>
+	</div>
+	<div class="container-fluid row justify-content-md-center ">
+		<img id="imgover" src="images/gameover.png" alt="">
+		<div id="gameOver" class="score">
+			<p>Tu puntaje fue de <span id="scoreEndGame"></span> puntos</p>
+			<a class="btn btnReiniciar" role="button" href="index.html"><i class="fa fa-refresh" aria-hidden="true"></i>Volver a Jugar</a>
+		</div>
+	</div>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/zombie.js"></script>	
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

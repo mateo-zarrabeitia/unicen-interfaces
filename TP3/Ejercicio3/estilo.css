@@ -1,0 +1,44 @@
+.segundos {
+  position: absolute;
+  height: 200px;
+  width: 2px;
+  left: 0; right: 0; bottom: 200px; top: 0px;
+  margin: auto;
+  background: #000;
+  -webkit-transform-origin: bottom;
+  background: #FF4136;
+}
+
+.minutos {
+  position: absolute;
+  height: 200px;
+  width: 2px;
+  left: 0; right: 0; bottom: 200px; top: 0px;
+  margin: auto;
+  background: #000;
+  -webkit-transform-origin: bottom;
+}
+
+.hora {
+  position: absolute;
+  height: 100px;
+  width: 6px;
+  left: 0; right: 0; bottom: 100px; top: 0px;
+  margin: auto;
+  background: #000;
+  -webkit-transform-origin: bottom;
+}
+
+.reloj {
+  background-image: url("reloj.png");
+  background-size: contain;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 450px;
+  height: 450px;
+  margin: auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}

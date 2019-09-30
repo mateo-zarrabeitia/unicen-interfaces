@@ -1,0 +1,14 @@
+div
+{
+  margin-top: 50px; 
+  display:inline-block;
+  box-sizing:border-box;
+  border:5px solid #750303;
+  margin-left: auto;
+  padding:35px;
+  width:160px;
+  height:90px;
+  background:#c53f0a;
+  text-align:center;
+  transition:all 0.3s ease;
+}
