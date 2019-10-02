@@ -19,6 +19,26 @@ body {
   margin-left: auto;
   visibility: hidden;
 }
+.bienvenidafont{
+  position: absolute;
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  margin-top: 80px;
+  color: #0ec90ec5
+
+}
+
+
+.bienvenida{
+  /* position: absolute; */
+  width: 240px;
+  height: 150px;
+  z-index: 1000;
+  margin-top: 180px;
+  margin-left: auto;
+  transform: translate(20px,0);
+}
+
 
 #gameOver{
   position: absolute;
@@ -68,7 +88,7 @@ body {
   font-family: 'Bangers', cursive;
 }
 
-.btnReiniciar{
+.btnReiniciar , .btnPlay{
   font-size: 20px;
   transform: translate(80px,0);
   background-color: rgb(178, 178, 178);

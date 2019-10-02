@@ -5,6 +5,7 @@ class Zombie{
   }
   
   run(){
+    this.zombie.classList.remove('zombie-dead2');
     this.zombie.classList.add('zombie-run');
   }
   

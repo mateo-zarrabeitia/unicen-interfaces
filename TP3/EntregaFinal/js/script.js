@@ -41,44 +41,30 @@ function liveMove(distance){
     }
 }
 
-function isCollision(){
+function isCollision(objeto){
+    obj = document.getElementById(objeto);
     let zombie_y = zombie.getTop();
     let zombie_x = zombie.getLeft();
     let zombie_h = zombie.getHeight();
     let zombie_w = zombie.getWidth();
     
-    let enemy_y = enemy.offsetTop;
-    let enemy_x = enemy.offsetLeft + document.getElementById("back-1").offsetLeft;
-    let enemy_h = enemy.offsetHeight;
-    let enemy_w = enemy.offsetWidth;
+    let enemy_y = obj.offsetTop;
+    let enemy_x = obj.offsetLeft + document.getElementById("back-1").offsetLeft;
+    let enemy_h = obj.offsetHeight;
+    let enemy_w = obj.offsetWidth;
     return!(
         ((zombie_y + zombie_h) < (enemy_y)) ||
         (zombie_y > (enemy_y + enemy_h)) ||
         ((zombie_x + zombie_w) < enemy_x) ||
         (zombie_x > (enemy_x + enemy_w)));
     }
-
-    function grabLive(){
-        let zombie_y = zombie.getTop();
-        let zombie_x = zombie.getLeft();
-        let zombie_h = zombie.getHeight();
-        let zombie_w = zombie.getWidth();
-        
-        let live_y = live.offsetTop;
-        let live_x = live.offsetLeft + document.getElementById("back-1").offsetLeft;
-        let live_h = live.offsetHeight;
-        let live_w = live.offsetWidth;
-        return!(
-            ((zombie_y + zombie_h) < (live_y)) ||
-            (zombie_y > (live_y + live_h)) ||
-            ((zombie_x + zombie_w) < live_x) ||
-            (zombie_x > (live_x + live_w)));
-        }
+    
+    
     loop = function() {
         puntaje += 1;
         document.getElementById('scoreIngame').innerHTML = puntaje;
         enemyMove(velocidad);
-        if(this.isCollision()&&(zombie.vidas >= 1)&&(!colision)){
+        if(this.isCollision("enemy")&&(zombie.vidas >= 1)&&(!colision)){
             colision = true;
             zombie.hurt();
             document.getElementById('heart'+zombie.vidas).src='images/brokenheart.png';
@@ -97,7 +83,8 @@ function isCollision(){
                 }, 1800); 
             }
         }
-        if(this.grabLive()&&(zombie.vidas < 3)&&(!colisionVida)){
+        
+        if(this.isCollision("live")&&(zombie.vidas < 3)&&(!colisionVida)){
             colisionVida = true;
             document.getElementById('heart'+(zombie.vidas+1)).src='images/heart.png';
             zombie.vidas= zombie.vidas+1;  
@@ -105,7 +92,7 @@ function isCollision(){
             console.log(zombie.vidas);
             
         }
-       
+        
         if (livenew) {
             liveMove(velocidad);            
         }
@@ -168,4 +155,52 @@ function isCollision(){
     window.addEventListener("keyup", function(e) {
         jump = false;
     })
-    window.requestAnimationFrame(loop);
+    
+    function start(){
+        zombie.vidas = 3;
+        zombie.run();
+        posicionEnemy = 1000;
+        puntaje = 0;    
+        document.getElementById('heart1').src='images/heart.png';
+        document.getElementById('heart2').src='images/heart.png';
+        document.getElementById('heart3').src='images/heart.png';
+        document.getElementById('enemy').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-1').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-2').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-3').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-4').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-5').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-6').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-7').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-8').style.webkitAnimationPlayState = 'running';
+        document.getElementById('back-9').style.webkitAnimationPlayState = 'running';
+        document.getElementById('zombie').style.webkitAnimationPlayState = 'running';
+        document.getElementById("game").style.webkitFilter = "";
+        window.requestAnimationFrame(loop);
+    }
+    
+    document.getElementById("play").addEventListener("click", function(e) {
+        document.getElementById('inicio').style.visibility = 'hidden';
+        e.preventDefault(); 
+        start();
+    })
+    
+    document.getElementById("reiniciar").addEventListener("click", function(e) {
+        document.getElementById('gameOver').style.visibility = 'hidden';
+        document.getElementById('imgover').style.visibility = 'hidden';
+        e.preventDefault(); 
+        start();
+    })
+    
+    document.getElementById('enemy').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-1').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-2').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-3').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-4').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-5').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-6').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-7').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-8').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('back-9').style.webkitAnimationPlayState = 'paused';
+    document.getElementById('zombie').style.webkitAnimationPlayState = 'paused';
+    document.getElementById("game").style.webkitFilter = "blur(5px)";
