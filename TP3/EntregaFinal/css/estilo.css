@@ -152,18 +152,18 @@ body {
   height: 220px;
   background: url('../images/zombie-jump.png') left center;
   background-size: cover;
-  animation: jump .9s steps(7) infinite;
+  animation: jump .8s steps(7) infinite;
   transform: translate(-200px,0);
   z-index: 1000;
 }
 
 @keyframes jump {
   100% { background-position: -749px}
-  0%{transform: translate(-200px,-0px); }
+  0%{transform: translate(-200px,15px); }
 
-  25%{transform: translate(-200px,-10px); }
+  25%{transform: translate(-200px,-20px); }
 
-  50%{transform: translate(-200px,-100px); }
+  50%{transform: translate(-200px,-50px); }
 
   75%{transform: translate(-200px,-50px); }
 

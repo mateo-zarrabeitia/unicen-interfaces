@@ -69,10 +69,9 @@ function isCollision(objeto){
             zombie.hurt();
             document.getElementById('heart'+zombie.vidas).src='images/brokenheart.png';
             zombie.vidas= zombie.vidas-1;  
-            if (zombie.vidas<3 && !livenew){
+            if (!livenew){
                 setTimeout(function() { 
                     livenew = true;
-                    console.log("vida");
                     
                 }, (Math.random() * (20000 - 10000) + 10000));
             }
@@ -89,12 +88,11 @@ function isCollision(objeto){
             document.getElementById('heart'+(zombie.vidas+1)).src='images/heart.png';
             zombie.vidas= zombie.vidas+1;  
             posicionLive = 1200;
-            console.log(zombie.vidas);
             
         }
         
         if (livenew) {
-            liveMove(velocidad);            
+            liveMove(velocidad-2);            
         }
         switch (puntaje) {
             case 1000:
@@ -160,7 +158,10 @@ function isCollision(objeto){
         zombie.vidas = 3;
         zombie.run();
         posicionEnemy = 1000;
+        posicionLive = 1200;
         puntaje = 0;    
+        colision = false;
+        colisionVida = false;
         document.getElementById('heart1').src='images/heart.png';
         document.getElementById('heart2').src='images/heart.png';
         document.getElementById('heart3').src='images/heart.png';
